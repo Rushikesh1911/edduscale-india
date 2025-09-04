@@ -1,18 +1,18 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Home from './pages/Home';
-// import Login from './pages/Login';
-// import Register from './pages/Register';
-
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import CreateAccount from "./pages/CreateAccount";
+import LoginPage from "./pages/LoginPage";
+import ProfileView from "./pages/Profileview";
 function App() {
   return (
     <Router>
-      <div className="max-w-md mx-auto bg-white min-h-screen">
-        <Routes>
-          {/* <Route path="/" element={<Home />} /> */}
-          {/* <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} /> */}
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/create-account" element={<CreateAccount />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/profile" element={<ProfileView />} />
+      </Routes>
     </Router>
   );
 }
